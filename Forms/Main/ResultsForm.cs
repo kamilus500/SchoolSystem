@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolSystem.ExtensionsMethod;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,11 @@ namespace SchoolSystem.Forms.Main
         private void ResultsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            Methods.RefreshDataGrid(dataGridAll, "select * from dbo.Show_StudentsWithGrades");
         }
     }
 }

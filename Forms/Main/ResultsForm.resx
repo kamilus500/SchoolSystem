@@ -126,4 +126,22 @@
   <metadata name="show_StudentsWithGradesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>417, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAOwAAADsAXkocb0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACYUlEQVRYR+3Xy+sNYRzH8eNOLsmdclvJn4BSdlZyt1f2Uq7ZYIPFL9eN61LIEilJ7spORERCRERu
+        pcT7PWe+p+d35DRzzvyOBZ96dWammWdmnjMzz/eplcgwLMc+3MYLfMU3vMItHIT7uG9lmQIb/oCfBX3G
+        fkxF2xmArfiCtHHXr+AwduYO5ds+Id3X3tmCQSiVybiKtLGzWIzB+FOGYhHOIz32OiagUKbjEeLgu5iH
+        spkDj412nmAazCjswMJsLckYPEYcZNd6V+3G3jqKaO8BxmFDvu5z1Uh/XEDsvAtVZTeiXf9KH2qX36GR
+        NYidTqAfOs1MXMR2nEK0/zH/vY8s/idv4canGI4qshFxUrv/e7KuS8gyG7HRJ72qTMIdpCdN2dONLMGK
+        +mKl8UH0efqB5gvYg65lAZ4jvYBN6GrG4gziAvqixwtlJdZiYLb2P/98HKvXwQfjr8QTx2vhK+Kr0tVY
+        scQF6DV+G6f7Mn4O0wuQn00/n62qn3azCkvri/U4IDRfQHAgsTyrKo430fYsNxiHxPSkDpkOnbG+HlVk
+        BJ7BNt9gJLJYFLgxigSdxDZYvcxAp7G4OY1ofzUasSxyo2XSuXxZllFVxJP3INr1pnpVW3HndvV4pN1/
+        DJ08iM6QjiPae4jR6BVfObs7/hNLZ0voOMjSei7KZj7uIdrxxgrPlJxEXEMcLCtmy7VWZfoQLENaXesy
+        JqJUHKs3w+lV2pjzPi/uCJyW+b1w2dmPk9Xmff3QOc1rO3abM+LmeV8r77EXFqWVxQfKL9gB3MBLeMdy
+        qn4TntS/oOBsqlb7BWnR7Cih8ghDAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
