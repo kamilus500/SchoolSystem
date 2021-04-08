@@ -148,6 +148,10 @@ namespace SchoolSystem
                 _tpAll = new TabPage();
                 Methods.ShowFormInTabPage(mainTabControl, _tpAll, ResultsForm.Instance);
             }
+            else
+            {
+                mainTabControl.SelectedTab = _tpAll;
+            }
         }
 
         private void mainTabControl_DrawItem(object sender, DrawItemEventArgs e)
