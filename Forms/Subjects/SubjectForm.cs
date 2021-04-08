@@ -63,19 +63,26 @@ namespace SchoolSystem.Forms.Subjects
 
         private void btnRemoveSubject_Click(object sender, EventArgs e)
         {
-            int tmp = Convert.ToInt32(dataGridSubjects.CurrentRow.Index);
-            string nazwa = Convert.ToString(dataGridSubjects.Rows[tmp].Cells[0].Value);
-            
-            try
+            if (dataGridSubjects.CurrentRow != null)
             {
-                QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
-                tableAdapter.RemoveSubject(nazwa);
-                Methods.RefreshDataGrid(dataGridSubjects, "select * from dbo.Show_Subjects");
+                int tmp = Convert.ToInt32(dataGridSubjects.CurrentRow.Index);
+                string nazwa = Convert.ToString(dataGridSubjects.Rows[tmp].Cells[0].Value);
+
+                try
+                {
+                    QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
+                    tableAdapter.RemoveSubject(nazwa);
+                    Methods.RefreshDataGrid(dataGridSubjects, "select * from dbo.Show_Subjects");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Nie wybrano żadnego przedmiotu.");
             }
         }
 

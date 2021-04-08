@@ -24,7 +24,7 @@ namespace SchoolSystem.Forms.Students
 
         private void EditStudentForm_Load(object sender, EventArgs e)
         {
-            if (dataGridViewStudentsForm.SelectedRows != null)
+            if (dataGridViewStudentsForm.CurrentRow != null)
             {
                 int tmp = Convert.ToInt32(dataGridViewStudentsForm.CurrentRow.Index);
                 boxIndexEdit.Text = Convert.ToString(dataGridViewStudentsForm.Rows[tmp].Cells[0].Value);

@@ -25,17 +25,12 @@ namespace SchoolSystem.Forms.Teachers
 
         private void EditTeacherForm_Load(object sender, EventArgs e)
         {
-            if (dataGridTeachersForm.SelectedRows != null)
-            {
-                int tmp = Convert.ToInt32(dataGridTeachersForm.CurrentRow.Index);
-                boxPrzedmiotEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[3].Value.ToString();
-                boxImieEdit.Text =dataGridTeachersForm.Rows[tmp].Cells[1].Value.ToString();
-                boxNazwiskoEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[2].Value.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Nie wybrano żadnego studenta z listy.");
-            }
+
+            int tmp = Convert.ToInt32(dataGridTeachersForm.CurrentRow.Index);
+            boxPrzedmiotEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[3].Value.ToString();
+            boxImieEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[1].Value.ToString();
+            boxNazwiskoEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[2].Value.ToString();
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -45,21 +40,21 @@ namespace SchoolSystem.Forms.Teachers
             int tmp = Convert.ToInt32(dataGridTeachersForm.CurrentRow.Index);
             int idNauczyciala = Convert.ToInt32(dataGridTeachersForm.Rows[tmp].Cells[0].Value);
             string imie = boxImieEdit.Text;
-            if(imie.Equals(""))
+            if (imie.Equals(""))
             {
                 imie = null;
             }
             string nazwisko = boxNazwiskoEdit.Text;
-            if(nazwisko.Equals(""))
+            if (nazwisko.Equals(""))
             {
                 nazwisko = null;
             }
             string przedmiot = boxPrzedmiotEdit.Text;
-            if(przedmiot.Equals(""))
+            if (przedmiot.Equals(""))
             {
                 przedmiot = null;
             }
-            if(przedmiot != null)
+            if (przedmiot != null)
             {
                 idPrzedmiot = db.FindIdSubject(przedmiot);
                 if (idPrzedmiot == 0)

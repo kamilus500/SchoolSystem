@@ -120,14 +120,14 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAll.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAN0AAADdAXBTogcAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABQElEQVRYR+2XPU4DMRCF9xhpyEx29wr0HAFxCERJRZMouQFtToCEaOkRJVKa1Fwk/BTOe5N1YkVj
-        oDJIONInrzxv9j1t7NW6acc670Q3IBRmQ++GF73oXat6VRJ60psBAidCCE1J6EnvGsACdKoPmLguCT0P
-        AUQ+Mb59wQfgyn1P5nJQQy17vPqAef7sL+hVz6hT/Lx6CjXUsserR+hZA9QAfydAN9Yb9I1ytCIXFvSk
-        PfXqKdSYFj1ePULPQ4BfJD6BJd5M51lkMtvpJpduPYUauzl6vHqEnjFAXYQ1QA2AbfGK8TkHPiDXGPFy
-        0Zfj2jGDJgw9rsbYeQ4BRFbYl/dZRJ+o60Ue3XqCaeye6HHqe+gZA9Q1UAP8+wDfH05FbynG1pm69QRq
-        qGWPV4/sD6c4Ii9wwcOCfSAUBMdznW8Bar7IMKUAA04AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFASURBVFhH7Zc9
+        TgMxEIX3GGnITHb3CvQcAXEIRElFkyi5AW1OgIRo6RElUprUXCT8FM57k3ViRWOgMkg40ievPG/2PW3s
+        1bppxzrvRDcgFGZD74YXvehdq3pVEnrSmwECJ0IITUnoSe8awAJ0qg+YuC4JPQ8BRD4xvn3BB+DKfU/m
+        clBDLXu8+oB5/uwv6FXPqFP8vHoKNdSyx6tH6FkD1AB/J0A31hv0jXK0IhcW9KQ99eop1JgWPV49Qs9D
+        gF8kPoEl3kznWWQy2+kml249hRq7OXq8eoSeMUBdhDVADYBt8YrxOQc+INcY8XLRl+PaMYMmDD2uxth5
+        DgFEVtiX91lEn6jrRR7deoJp7J7ocep76BkD1DVQA/z7AN8fTkVvKcbWmbr1BGqoZY9Xj+wPpzgiL3DB
+        w4J9IBQEx3OdbwFqvsgwpQADTgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnGrades.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

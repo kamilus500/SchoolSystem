@@ -29,36 +29,43 @@ namespace SchoolSystem.Forms.Grades
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            try
+            if(dgStudentsInGrades.CurrentRow != null)
             {
-                int tmp = Convert.ToInt32(dgStudentsInGrades.CurrentRow.Index);
-                int nrIndeks = Convert.ToInt32(dgStudentsInGrades.Rows[tmp].Cells[0].Value);
-                int grade = Convert.ToInt32(boxGrade.Text);
+                try
+                {
+                    int tmp = Convert.ToInt32(dgStudentsInGrades.CurrentRow.Index);
+                    int nrIndeks = Convert.ToInt32(dgStudentsInGrades.Rows[tmp].Cells[0].Value);
+                    int grade = Convert.ToInt32(boxGrade.Text);
 
-                if (boxPrzedmiot.Text == "")
-                {
-                    MessageBox.Show("Proszę podać nazwę przedmiotu");
-                }
-                else
-                {
-                    int idPrzedmiot = db.FindIdSubject(boxPrzedmiot.Text);
-                    if (idPrzedmiot == 0)
+                    if (boxPrzedmiot.Text == "")
                     {
-                        MessageBox.Show("Nie ma przedmiotu o takiej nazwie");
+                        MessageBox.Show("Proszę podać nazwę przedmiotu");
                     }
                     else
                     {
-                        QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
-                        tableAdapter.AddGrade(idPrzedmiot, nrIndeks, grade);
-                        this.Close();
+                        int idPrzedmiot = db.FindIdSubject(boxPrzedmiot.Text);
+                        if (idPrzedmiot == 0)
+                        {
+                            MessageBox.Show("Nie ma przedmiotu o takiej nazwie");
+                        }
+                        else
+                        {
+                            QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
+                            tableAdapter.AddGrade(idPrzedmiot, nrIndeks, grade);
+                            this.Close();
 
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Nie wybrano żadnego studenta.");
             }
         }
     }

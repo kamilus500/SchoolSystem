@@ -66,14 +66,21 @@ namespace SchoolSystem.Forms.Teachers
 
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
-            EditTeacherForm form = new EditTeacherForm(dataGridTeachers);
-            form.ShowDialog();
-            Methods.RefreshDataGrid(dataGridTeachers, "select * from dbo.Show_Teachers");
+            if (dataGridTeachers.CurrentRow != null)
+            {
+                EditTeacherForm form = new EditTeacherForm(dataGridTeachers);
+                form.ShowDialog();
+                Methods.RefreshDataGrid(dataGridTeachers, "select * from dbo.Show_Teachers");
+            }
+            else
+            {
+                MessageBox.Show("Nie wybrano żadnego studenta z listy.");
+            }
         }
 
         private void btnRemoveStudent_Click(object sender, EventArgs e)
         {
-            if (dataGridTeachers.SelectedRows != null)
+            if (dataGridTeachers.CurrentRow != null)
             {
                 int tmp = Convert.ToInt32(dataGridTeachers.CurrentRow.Index);
                 int id = Convert.ToInt32(dataGridTeachers.Rows[tmp].Cells[0].Value);

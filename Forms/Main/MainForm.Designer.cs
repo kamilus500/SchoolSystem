@@ -41,6 +41,7 @@ namespace SchoolSystem
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAll = new System.Windows.Forms.Button();
             this.btnGrades = new System.Windows.Forms.Button();
             this.btnSubjects = new System.Windows.Forms.Button();
             this.btnTeachers = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@ namespace SchoolSystem
             this.statusLogin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.schoolDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAll = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.layoutButtons.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -166,6 +166,19 @@ namespace SchoolSystem
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " ";
             // 
+            // btnAll
+            // 
+            this.btnAll.Image = ((System.Drawing.Image)(resources.GetObject("btnAll.Image")));
+            this.btnAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAll.Location = new System.Drawing.Point(481, 12);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(101, 40);
+            this.btnAll.TabIndex = 4;
+            this.btnAll.Text = "Tabela ";
+            this.btnAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
             // btnGrades
             // 
             this.btnGrades.Image = ((System.Drawing.Image)(resources.GetObject("btnGrades.Image")));
@@ -222,6 +235,7 @@ namespace SchoolSystem
             // 
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.mainTabControl.ItemSize = new System.Drawing.Size(60, 20);
             this.mainTabControl.Location = new System.Drawing.Point(3, 73);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
@@ -254,19 +268,6 @@ namespace SchoolSystem
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(88, 17);
             this.toolStripStatusLabel2.Text = "Version 1.0.0";
-            // 
-            // btnAll
-            // 
-            this.btnAll.Image = ((System.Drawing.Image)(resources.GetObject("btnAll.Image")));
-            this.btnAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAll.Location = new System.Drawing.Point(481, 12);
-            this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(101, 40);
-            this.btnAll.TabIndex = 4;
-            this.btnAll.Text = "Tabela ";
-            this.btnAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAll.UseVisualStyleBackColor = true;
-            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // MainForm
             // 

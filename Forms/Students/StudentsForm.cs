@@ -69,7 +69,7 @@ namespace SchoolSystem.Forms
         private void btnRemoveStudent_Click(object sender, EventArgs e)
         {
 
-            if (dataGridStudents.SelectedRows != null)
+            if (dataGridStudents.CurrentRow != null)
             {
                 int tmp = Convert.ToInt32(dataGridStudents.CurrentRow.Index);
                 int index = Convert.ToInt32(dataGridStudents.Rows[tmp].Cells[0].Value);
@@ -93,9 +93,17 @@ namespace SchoolSystem.Forms
 
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
-            EditStudentForm form = new EditStudentForm(dataGridStudents);
-            form.ShowDialog();
-            Methods.RefreshDataGrid(dataGridStudents, "select * from dbo.Show_Students");
+            if(dataGridStudents.CurrentRow != null)
+            {
+                EditStudentForm form = new EditStudentForm(dataGridStudents);
+                form.ShowDialog();
+                Methods.RefreshDataGrid(dataGridStudents, "select * from dbo.Show_Students");
+            }
+            else
+            {
+                MessageBox.Show("Nie wybrano żadnego studenta.");
+            }
+
         }
 
     }

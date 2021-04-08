@@ -33,24 +33,24 @@ namespace SchoolSystem.Forms.Grades
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradesForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRemoveStudent = new System.Windows.Forms.Button();
+            this.btnRemoveGrade = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.btnAddGrade = new System.Windows.Forms.Button();
+            this.dataGridGrades = new System.Windows.Forms.DataGridView();
+            this.przedmiotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ocenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indeksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showGradesWithSubjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.schoolDataSet1 = new SchoolSystem.Entities.SchoolDataSet();
             this.show_GradesWithSubjectTableAdapter1 = new SchoolSystem.Entities.SchoolDataSetTableAdapters.Show_GradesWithSubjectTableAdapter();
             this.ocenyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ocenyTableAdapter = new SchoolSystem.Entities.SchoolDataSetTableAdapters.OcenyTableAdapter();
-            this.dataGridGrades = new System.Windows.Forms.DataGridView();
-            this.przedmiotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ocenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.indeksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGrades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showGradesWithSubjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocenyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridGrades)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,28 +70,28 @@ namespace SchoolSystem.Forms.Grades
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnRemoveStudent);
+            this.panel1.Controls.Add(this.btnRemoveGrade);
             this.panel1.Controls.Add(this.splitter1);
-            this.panel1.Controls.Add(this.btnAddStudent);
+            this.panel1.Controls.Add(this.btnAddGrade);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(980, 44);
             this.panel1.TabIndex = 0;
             // 
-            // btnRemoveStudent
+            // btnRemoveGrade
             // 
-            this.btnRemoveStudent.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnRemoveStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveStudent.Image")));
-            this.btnRemoveStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemoveStudent.Location = new System.Drawing.Point(115, 0);
-            this.btnRemoveStudent.Name = "btnRemoveStudent";
-            this.btnRemoveStudent.Size = new System.Drawing.Size(105, 44);
-            this.btnRemoveStudent.TabIndex = 3;
-            this.btnRemoveStudent.Text = "Usuń";
-            this.btnRemoveStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveStudent.UseVisualStyleBackColor = true;
-            this.btnRemoveStudent.Click += new System.EventHandler(this.btnRemoveStudent_Click);
+            this.btnRemoveGrade.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnRemoveGrade.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveGrade.Image")));
+            this.btnRemoveGrade.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemoveGrade.Location = new System.Drawing.Point(115, 0);
+            this.btnRemoveGrade.Name = "btnRemoveGrade";
+            this.btnRemoveGrade.Size = new System.Drawing.Size(105, 44);
+            this.btnRemoveGrade.TabIndex = 3;
+            this.btnRemoveGrade.Text = "Usuń";
+            this.btnRemoveGrade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveGrade.UseVisualStyleBackColor = true;
+            this.btnRemoveGrade.Click += new System.EventHandler(this.btnRemoveGrade_Click);
             // 
             // splitter1
             // 
@@ -101,42 +101,19 @@ namespace SchoolSystem.Forms.Grades
             this.splitter1.TabIndex = 2;
             this.splitter1.TabStop = false;
             // 
-            // btnAddStudent
+            // btnAddGrade
             // 
-            this.btnAddStudent.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudent.Image")));
-            this.btnAddStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddStudent.Location = new System.Drawing.Point(0, 0);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(105, 44);
-            this.btnAddStudent.TabIndex = 1;
-            this.btnAddStudent.Text = "Dodaj";
-            this.btnAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStudent.UseVisualStyleBackColor = true;
-            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            // 
-            // showGradesWithSubjectBindingSource
-            // 
-            this.showGradesWithSubjectBindingSource.DataMember = "Show_GradesWithSubject";
-            this.showGradesWithSubjectBindingSource.DataSource = this.schoolDataSet1;
-            // 
-            // schoolDataSet1
-            // 
-            this.schoolDataSet1.DataSetName = "SchoolDataSet";
-            this.schoolDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // show_GradesWithSubjectTableAdapter1
-            // 
-            this.show_GradesWithSubjectTableAdapter1.ClearBeforeFill = true;
-            // 
-            // ocenyBindingSource
-            // 
-            this.ocenyBindingSource.DataMember = "Oceny";
-            this.ocenyBindingSource.DataSource = this.schoolDataSet1;
-            // 
-            // ocenyTableAdapter
-            // 
-            this.ocenyTableAdapter.ClearBeforeFill = true;
+            this.btnAddGrade.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddGrade.Image = ((System.Drawing.Image)(resources.GetObject("btnAddGrade.Image")));
+            this.btnAddGrade.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddGrade.Location = new System.Drawing.Point(0, 0);
+            this.btnAddGrade.Name = "btnAddGrade";
+            this.btnAddGrade.Size = new System.Drawing.Size(105, 44);
+            this.btnAddGrade.TabIndex = 1;
+            this.btnAddGrade.Text = "Dodaj";
+            this.btnAddGrade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddGrade.UseVisualStyleBackColor = true;
+            this.btnAddGrade.Click += new System.EventHandler(this.btnAddGrade_Click);
             // 
             // dataGridGrades
             // 
@@ -180,6 +157,29 @@ namespace SchoolSystem.Forms.Grades
             this.indeksDataGridViewTextBoxColumn.Name = "indeksDataGridViewTextBoxColumn";
             this.indeksDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // showGradesWithSubjectBindingSource
+            // 
+            this.showGradesWithSubjectBindingSource.DataMember = "Show_GradesWithSubject";
+            this.showGradesWithSubjectBindingSource.DataSource = this.schoolDataSet1;
+            // 
+            // schoolDataSet1
+            // 
+            this.schoolDataSet1.DataSetName = "SchoolDataSet";
+            this.schoolDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // show_GradesWithSubjectTableAdapter1
+            // 
+            this.show_GradesWithSubjectTableAdapter1.ClearBeforeFill = true;
+            // 
+            // ocenyBindingSource
+            // 
+            this.ocenyBindingSource.DataMember = "Oceny";
+            this.ocenyBindingSource.DataSource = this.schoolDataSet1;
+            // 
+            // ocenyTableAdapter
+            // 
+            this.ocenyTableAdapter.ClearBeforeFill = true;
+            // 
             // GradesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,10 +193,10 @@ namespace SchoolSystem.Forms.Grades
             this.Load += new System.EventHandler(this.GradesForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGrades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showGradesWithSubjectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocenyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridGrades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,9 +205,9 @@ namespace SchoolSystem.Forms.Grades
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.Button btnAddGrade;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button btnRemoveStudent;
+        private System.Windows.Forms.Button btnRemoveGrade;
         private Entities.SchoolDataSet schoolDataSet1;
         private System.Windows.Forms.BindingSource showGradesWithSubjectBindingSource;
         private Entities.SchoolDataSetTableAdapters.Show_GradesWithSubjectTableAdapter show_GradesWithSubjectTableAdapter1;
