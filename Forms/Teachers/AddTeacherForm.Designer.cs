@@ -127,6 +127,7 @@ namespace SchoolSystem.Forms.Teachers
             this.ClientSize = new System.Drawing.Size(384, 461);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddTeacherForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTeacherForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

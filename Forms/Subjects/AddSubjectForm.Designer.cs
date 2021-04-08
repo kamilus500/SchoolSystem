@@ -76,13 +76,14 @@ namespace SchoolSystem.Forms.Subjects
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // AddSubject
+            // AddSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 221);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AddSubject";
+            this.Name = "AddSubjectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formularz Dodania";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

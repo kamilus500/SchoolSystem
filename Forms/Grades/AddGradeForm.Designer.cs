@@ -38,18 +38,18 @@ namespace SchoolSystem.Forms.Grades
             this.label1 = new System.Windows.Forms.Label();
             this.boxGrade = new System.Windows.Forms.TextBox();
             this.dgStudentsInGrades = new System.Windows.Forms.DataGridView();
-            this.schoolDataSet1 = new SchoolSystem.Entities.SchoolDataSet();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter1 = new SchoolSystem.Entities.SchoolDataSetTableAdapters.StudentTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schoolDataSet1 = new SchoolSystem.Entities.SchoolDataSet();
+            this.studentTableAdapter1 = new SchoolSystem.Entities.SchoolDataSetTableAdapters.StudentTableAdapter();
             this.panelAddGradeForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgStudentsInGrades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAddGradeForm
@@ -144,20 +144,6 @@ namespace SchoolSystem.Forms.Grades
             this.dgStudentsInGrades.Size = new System.Drawing.Size(359, 296);
             this.dgStudentsInGrades.TabIndex = 0;
             // 
-            // schoolDataSet1
-            // 
-            this.schoolDataSet1.DataSetName = "SchoolDataSet";
-            this.schoolDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.schoolDataSet1;
-            // 
-            // studentTableAdapter1
-            // 
-            this.studentTableAdapter1.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Nr_indeks";
@@ -190,6 +176,20 @@ namespace SchoolSystem.Forms.Grades
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 107;
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.schoolDataSet1;
+            // 
+            // schoolDataSet1
+            // 
+            this.schoolDataSet1.DataSetName = "SchoolDataSet";
+            this.schoolDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
+            // 
             // AddGradeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,14 +197,15 @@ namespace SchoolSystem.Forms.Grades
             this.ClientSize = new System.Drawing.Size(384, 461);
             this.Controls.Add(this.panelAddGradeForm);
             this.Name = "AddGradeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddGradeForm";
             this.Load += new System.EventHandler(this.AddGradeForm_Load);
             this.panelAddGradeForm.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgStudentsInGrades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
