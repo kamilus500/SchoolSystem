@@ -32,8 +32,8 @@ namespace SchoolSystem.Forms.Grades
             this.components = new System.ComponentModel.Container();
             this.panelAddGradeForm = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxofSubjects = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.boxPrzedmiot = new System.Windows.Forms.TextBox();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.boxGrade = new System.Windows.Forms.TextBox();
@@ -63,8 +63,8 @@ namespace SchoolSystem.Forms.Grades
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBoxofSubjects);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.boxPrzedmiot);
             this.groupBox1.Controls.Add(this.btnDodaj);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.boxGrade);
@@ -76,6 +76,15 @@ namespace SchoolSystem.Forms.Grades
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodanie oceny";
             // 
+            // comboBoxofSubjects
+            // 
+            this.comboBoxofSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBoxofSubjects.FormattingEnabled = true;
+            this.comboBoxofSubjects.Location = new System.Drawing.Point(256, 350);
+            this.comboBoxofSubjects.Name = "comboBoxofSubjects";
+            this.comboBoxofSubjects.Size = new System.Drawing.Size(100, 23);
+            this.comboBoxofSubjects.TabIndex = 6;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -85,14 +94,6 @@ namespace SchoolSystem.Forms.Grades
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Przedmiot";
-            // 
-            // boxPrzedmiot
-            // 
-            this.boxPrzedmiot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.boxPrzedmiot.Location = new System.Drawing.Point(256, 351);
-            this.boxPrzedmiot.Name = "boxPrzedmiot";
-            this.boxPrzedmiot.Size = new System.Drawing.Size(100, 22);
-            this.boxPrzedmiot.TabIndex = 4;
             // 
             // btnDodaj
             // 
@@ -219,7 +220,6 @@ namespace SchoolSystem.Forms.Grades
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox boxGrade;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox boxPrzedmiot;
         private Entities.SchoolDataSet schoolDataSet1;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private Entities.SchoolDataSetTableAdapters.StudentTableAdapter studentTableAdapter1;
@@ -227,5 +227,6 @@ namespace SchoolSystem.Forms.Grades
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ComboBox comboBoxofSubjects;
     }
 }

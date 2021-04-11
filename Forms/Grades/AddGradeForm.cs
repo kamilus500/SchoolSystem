@@ -1,7 +1,9 @@
 ﻿
 using SchoolSystem.Entities;
 using SchoolSystem.Entities.SchoolDataSetTableAdapters;
+using SchoolSystem.ExtensionsMethod;
 using SchoolSystem.Helpers;
+using SchoolSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,14 +19,21 @@ namespace SchoolSystem.Forms.Grades
     public partial class AddGradeForm : Form
     {
         public SchoolDataSet db = new SchoolDataSet();
+        public List<SubjectModel> listsOfSubjects = new List<SubjectModel>(); 
+
         public AddGradeForm()
         {
             InitializeComponent();
+            listsOfSubjects = Methods.LoadSubjects();
         }
 
         private void AddGradeForm_Load(object sender, EventArgs e)
         {
             this.studentTableAdapter1.Fill(this.schoolDataSet1.Student);
+            foreach (var item in listsOfSubjects)
+            {
+                comboBoxofSubjects.Items.Add(item.Name);
+            }
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -35,15 +44,20 @@ namespace SchoolSystem.Forms.Grades
                 {
                     int tmp = Convert.ToInt32(dgStudentsInGrades.CurrentRow.Index);
                     int nrIndeks = Convert.ToInt32(dgStudentsInGrades.Rows[tmp].Cells[0].Value);
-                    int grade = Convert.ToInt32(boxGrade.Text);
+                    string stringGrade = boxGrade.Text;
 
-                    if (boxPrzedmiot.Text == "")
+                    if (boxGrade.Text == "")
                     {
-                        MessageBox.Show("Proszę podać nazwę przedmiotu");
+                        MessageBox.Show("Proszę wpisać ocenę.");
+                    }
+                    else if (comboBoxofSubjects.SelectedItem == null)
+                    {
+                        MessageBox.Show("Proszę wybrać przedmiot");
                     }
                     else
                     {
-                        int idPrzedmiot = db.FindIdSubject(boxPrzedmiot.Text);
+                        int intGrade = Convert.ToInt32(stringGrade);
+                        int idPrzedmiot = db.FindIdSubject(comboBoxofSubjects.SelectedItem.ToString());
                         if (idPrzedmiot == 0)
                         {
                             MessageBox.Show("Nie ma przedmiotu o takiej nazwie");
@@ -51,7 +65,7 @@ namespace SchoolSystem.Forms.Grades
                         else
                         {
                             QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
-                            tableAdapter.AddGrade(idPrzedmiot, nrIndeks, grade);
+                            tableAdapter.AddGrade(idPrzedmiot, nrIndeks, intGrade);
                             this.Close();
 
                         }
