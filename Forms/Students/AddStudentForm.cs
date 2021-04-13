@@ -22,21 +22,28 @@ namespace SchoolSystem.Forms.Students
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (boxImie.Text != "" || boxNazwisko.Text != "" || boxIndex.Text != "")
             {
-                int index = Convert.ToInt32(boxIndex.Text);
-                string firstName = boxImie.Text;
-                string lastName = boxNazwisko.Text;
-                DateTime date = dtPickerStudent.Value;
-                QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
-                tableAdapter.AddStudent(index, firstName, lastName, date);
+                try
+                {
+                    int index = Convert.ToInt32(boxIndex.Text);
+                    string firstName = boxImie.Text;
+                    string lastName = boxNazwisko.Text;
+                    DateTime date = dtPickerStudent.Value;
+                    QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
+                    tableAdapter.AddStudent(index, firstName, lastName, date);
 
-                this.Close();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Proszę wypełnić wymagane pola.");
             }
         }
     }

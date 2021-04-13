@@ -19,7 +19,7 @@ namespace SchoolSystem.Forms.Grades
     public partial class AddGradeForm : Form
     {
         public SchoolDataSet db = new SchoolDataSet();
-        public List<SubjectModel> listsOfSubjects = new List<SubjectModel>(); 
+        private List<SubjectModel> listsOfSubjects = new List<SubjectModel>(); 
 
         public AddGradeForm()
         {

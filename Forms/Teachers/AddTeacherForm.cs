@@ -1,6 +1,8 @@
 ﻿using SchoolSystem.Entities;
 using SchoolSystem.Entities.SchoolDataSetTableAdapters;
+using SchoolSystem.ExtensionsMethod;
 using SchoolSystem.Helpers;
+using SchoolSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,43 +18,59 @@ namespace SchoolSystem.Forms.Teachers
     public partial class AddTeacherForm : Form
     {
         public SchoolDataSet db = new SchoolDataSet();
+        private List<SubjectModel> listsOfSubjects = new List<SubjectModel>();
         public AddTeacherForm()
         {
             InitializeComponent();
+            listsOfSubjects = Methods.LoadSubjects();
+        }
+        private void AddTeacherForm_Load(object sender, EventArgs e)
+        {
+            foreach (var item in listsOfSubjects)
+            {
+                comboxSubjects.Items.Add(item.Name);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (boxImie.Text != "" || boxNazwisko.Text != "" || comboxSubjects.SelectedItem != null)
             {
-                string przedmiot = boxPrzedmiot.Text;
-                int id = db.FindIdSubject(przedmiot);
-                string imie = boxImie.Text;
-                string nazwisko = boxNazwisko.Text;
-                if (imie == "" && nazwisko == "" && przedmiot == "")
+                try
                 {
-                    MessageBox.Show("Proszę wypełnić wymagane pola");
-                }
-                else if (id == 0)
-                {
-                    MessageBox.Show("Nie ma przedmiotu o takiej nazwie.");
-                }
-                else if (imie == "" && nazwisko == "")
-                {
-                    MessageBox.Show("Proszę podać imię oraz nazwisko nauczyciela.");
-                }
-                else
-                {
-                    QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
-                    tableAdapter.AddTeacher(id, imie, nazwisko);
+                    string przedmiot = comboxSubjects.SelectedItem.ToString();
+                    int id = db.FindIdSubject(przedmiot);
+                    string imie = boxImie.Text;
+                    string nazwisko = boxNazwisko.Text;
+                    if (imie == "" && nazwisko == "" && przedmiot == "")
+                    {
+                        MessageBox.Show("Proszę wypełnić wymagane pola");
+                    }
+                    else if (id == 0)
+                    {
+                        MessageBox.Show("Nie ma przedmiotu o takiej nazwie.");
+                    }
+                    else if (imie == "" && nazwisko == "")
+                    {
+                        MessageBox.Show("Proszę podać imię oraz nazwisko nauczyciela.");
+                    }
+                    else
+                    {
+                        QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
+                        tableAdapter.AddTeacher(id, imie, nazwisko);
 
-                    this.Close();
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
                 }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Proszę wypełnić podane pola.");
             }
         }
     }

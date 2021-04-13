@@ -1,6 +1,8 @@
 ﻿using SchoolSystem.Entities;
 using SchoolSystem.Entities.SchoolDataSetTableAdapters;
+using SchoolSystem.ExtensionsMethod;
 using SchoolSystem.Helpers;
+using SchoolSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,20 +19,26 @@ namespace SchoolSystem.Forms.Teachers
     {
         public DataGridView dataGridTeachersForm;
         public SchoolDataSet db = new SchoolDataSet();
+        private List<SubjectModel> listsOfSubjects = new List<SubjectModel>();
         public EditTeacherForm(DataGridView dataGrid)
         {
             InitializeComponent();
             dataGridTeachersForm = dataGrid;
+            listsOfSubjects = Methods.LoadSubjects();
         }
 
         private void EditTeacherForm_Load(object sender, EventArgs e)
         {
 
             int tmp = Convert.ToInt32(dataGridTeachersForm.CurrentRow.Index);
-            boxPrzedmiotEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[3].Value.ToString();
+            comboBoxSubjects.SelectedItem = dataGridTeachersForm.Rows[tmp].Cells[3].Value.ToString();
             boxImieEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[1].Value.ToString();
             boxNazwiskoEdit.Text = dataGridTeachersForm.Rows[tmp].Cells[2].Value.ToString();
 
+            foreach (var item in listsOfSubjects)
+            {
+                comboBoxSubjects.Items.Add(item.Name);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -49,10 +57,10 @@ namespace SchoolSystem.Forms.Teachers
             {
                 nazwisko = null;
             }
-            string przedmiot = boxPrzedmiotEdit.Text;
-            if (przedmiot.Equals(""))
+            string przedmiot = string.Empty;
+            if(comboBoxSubjects.SelectedItem == null)
             {
-                przedmiot = null;
+                przedmiot = comboBoxSubjects.SelectedItem.ToString();
             }
             if (przedmiot != null)
             {

@@ -42,41 +42,48 @@ namespace SchoolSystem.Forms.Students
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            try
+            if (boxImieEdit.Text != "" || boxIndexEdit.Text != "" || boxNazwiskoEdit.Text != "")
             {
-                int tmp = Convert.ToInt32(dataGridViewStudentsForm.CurrentRow.Index);
-                int actuallyIndex = Convert.ToInt32(dataGridViewStudentsForm.Rows[tmp].Cells[0].Value);
-                string tmpIndex = boxIndexEdit.Text;
-                int index;
-                if (tmpIndex.Equals(""))
+                try
                 {
-                    index = Convert.ToInt32(dataGridViewStudentsForm.Rows[tmp].Cells[0].Value);
-                }
-                else
-                {
-                    index = Convert.ToInt32(tmpIndex);
-                }
-                string imie = boxImieEdit.Text;
-                if (imie.Equals(""))
-                {
-                    imie = null;
-                }
-                string nazwisko = boxNazwiskoEdit.Text;
-                if (nazwisko.Equals(""))
-                {
-                    nazwisko = null;
-                }
-                DateTime dataurodzenia = Convert.ToDateTime(dtPickerStudentEdit.Value);
-                QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
+                    int tmp = Convert.ToInt32(dataGridViewStudentsForm.CurrentRow.Index);
+                    int actuallyIndex = Convert.ToInt32(dataGridViewStudentsForm.Rows[tmp].Cells[0].Value);
+                    string tmpIndex = boxIndexEdit.Text;
+                    int index;
+                    if (tmpIndex.Equals(""))
+                    {
+                        index = Convert.ToInt32(dataGridViewStudentsForm.Rows[tmp].Cells[0].Value);
+                    }
+                    else
+                    {
+                        index = Convert.ToInt32(tmpIndex);
+                    }
+                    string imie = boxImieEdit.Text;
+                    if (imie.Equals(""))
+                    {
+                        imie = null;
+                    }
+                    string nazwisko = boxNazwiskoEdit.Text;
+                    if (nazwisko.Equals(""))
+                    {
+                        nazwisko = null;
+                    }
+                    DateTime dataurodzenia = Convert.ToDateTime(dtPickerStudentEdit.Value);
+                    QueriesTableAdapter tableAdapter = new QueriesTableAdapter();
 
-                tableAdapter.EditStudent(actuallyIndex, index, imie, nazwisko, dataurodzenia);
+                    tableAdapter.EditStudent(actuallyIndex, index, imie, nazwisko, dataurodzenia);
 
-                this.Close();
+                    this.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show("Proszę wypełnić podane pola.");
             }
         }
     }

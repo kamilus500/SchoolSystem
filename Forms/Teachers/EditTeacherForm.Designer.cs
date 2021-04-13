@@ -30,19 +30,19 @@ namespace SchoolSystem.Forms.Teachers
         private void InitializeComponent()
         {
             this.groubEditTeacher = new System.Windows.Forms.GroupBox();
-            this.boxPrzedmiotEdit = new System.Windows.Forms.TextBox();
             this.boxNazwiskoEdit = new System.Windows.Forms.TextBox();
             this.boxImieEdit = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.comboBoxSubjects = new System.Windows.Forms.ComboBox();
             this.groubEditTeacher.SuspendLayout();
             this.SuspendLayout();
             // 
             // groubEditTeacher
             // 
-            this.groubEditTeacher.Controls.Add(this.boxPrzedmiotEdit);
+            this.groubEditTeacher.Controls.Add(this.comboBoxSubjects);
             this.groubEditTeacher.Controls.Add(this.boxNazwiskoEdit);
             this.groubEditTeacher.Controls.Add(this.boxImieEdit);
             this.groubEditTeacher.Controls.Add(this.label3);
@@ -55,14 +55,6 @@ namespace SchoolSystem.Forms.Teachers
             this.groubEditTeacher.TabIndex = 2;
             this.groubEditTeacher.TabStop = false;
             this.groubEditTeacher.Text = "Edycja nauczyciela";
-            // 
-            // boxPrzedmiotEdit
-            // 
-            this.boxPrzedmiotEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.boxPrzedmiotEdit.Location = new System.Drawing.Point(144, 155);
-            this.boxPrzedmiotEdit.Name = "boxPrzedmiotEdit";
-            this.boxPrzedmiotEdit.Size = new System.Drawing.Size(202, 22);
-            this.boxPrzedmiotEdit.TabIndex = 7;
             // 
             // boxNazwiskoEdit
             // 
@@ -120,6 +112,14 @@ namespace SchoolSystem.Forms.Teachers
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // comboBoxSubjects
+            // 
+            this.comboBoxSubjects.FormattingEnabled = true;
+            this.comboBoxSubjects.Location = new System.Drawing.Point(144, 158);
+            this.comboBoxSubjects.Name = "comboBoxSubjects";
+            this.comboBoxSubjects.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxSubjects.TabIndex = 7;
+            // 
             // EditTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,12 +139,12 @@ namespace SchoolSystem.Forms.Teachers
         #endregion
 
         private System.Windows.Forms.GroupBox groubEditTeacher;
-        private System.Windows.Forms.TextBox boxPrzedmiotEdit;
         private System.Windows.Forms.TextBox boxNazwiskoEdit;
         private System.Windows.Forms.TextBox boxImieEdit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.ComboBox comboBoxSubjects;
     }
 }

@@ -30,19 +30,19 @@ namespace SchoolSystem.Forms.Teachers
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.boxPrzedmiot = new System.Windows.Forms.TextBox();
             this.boxNazwisko = new System.Windows.Forms.TextBox();
             this.boxImie = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.comboxSubjects = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.boxPrzedmiot);
+            this.groupBox1.Controls.Add(this.comboxSubjects);
             this.groupBox1.Controls.Add(this.boxNazwisko);
             this.groupBox1.Controls.Add(this.boxImie);
             this.groupBox1.Controls.Add(this.label3);
@@ -55,14 +55,6 @@ namespace SchoolSystem.Forms.Teachers
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodanie nauczyciela";
-            // 
-            // boxPrzedmiot
-            // 
-            this.boxPrzedmiot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.boxPrzedmiot.Location = new System.Drawing.Point(144, 155);
-            this.boxPrzedmiot.Name = "boxPrzedmiot";
-            this.boxPrzedmiot.Size = new System.Drawing.Size(202, 22);
-            this.boxPrzedmiot.TabIndex = 7;
             // 
             // boxNazwisko
             // 
@@ -120,6 +112,15 @@ namespace SchoolSystem.Forms.Teachers
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // comboxSubjects
+            // 
+            this.comboxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboxSubjects.FormattingEnabled = true;
+            this.comboxSubjects.Location = new System.Drawing.Point(144, 152);
+            this.comboxSubjects.Name = "comboxSubjects";
+            this.comboxSubjects.Size = new System.Drawing.Size(202, 23);
+            this.comboxSubjects.TabIndex = 7;
+            // 
             // AddTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +130,7 @@ namespace SchoolSystem.Forms.Teachers
             this.Name = "AddTeacherForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTeacherForm";
+            this.Load += new System.EventHandler(this.AddTeacherForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -138,12 +140,12 @@ namespace SchoolSystem.Forms.Teachers
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox boxPrzedmiot;
         private System.Windows.Forms.TextBox boxNazwisko;
         private System.Windows.Forms.TextBox boxImie;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox comboxSubjects;
     }
 }
