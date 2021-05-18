@@ -19,8 +19,7 @@ namespace SchoolSystem.ExtensionsMethod
         public static SchoolDataSet db = new SchoolDataSet();
         public static void RefreshDataGrid(DataGridView dataGrid,string query)
         {
-
-            string connectionString = SchoolSystem.Properties.Settings.Default.SchoolConnectionString.ToString();
+            string connectionString = SchoolSystem.Properties.Settings.Default.SchoolConnectionString;
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
@@ -57,7 +56,7 @@ namespace SchoolSystem.ExtensionsMethod
 
             foreach (var item in tmp2)
             {
-                list.Add(new SubjectModel { Name = item.Name.ToString() });
+                list.Add(new SubjectModel { Name = item.Name});
             }
 
             return list;

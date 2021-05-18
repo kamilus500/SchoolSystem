@@ -24,7 +24,7 @@ namespace SchoolSystem
     { 
         public bool IsLogin = false;
         public SchoolDataSet db = new SchoolDataSet();
-        public List<UserModel> listOfUsers = new List<UserModel>();
+        public List<UserModel> ListOfUsers = new List<UserModel>();
 
         private TabPage _tpStudents;
         private TabPage _tpTeachers;
@@ -39,7 +39,7 @@ namespace SchoolSystem
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            listOfUsers = db.LoadUsers();
+            ListOfUsers = db.LoadUsers();
             btnStudents.Enabled = false;
             btnSubjects.Enabled = false;
             btnGrades.Enabled = false;
@@ -50,7 +50,7 @@ namespace SchoolSystem
         private void btnLogin_Click(object sender, EventArgs e)
         {
             UserModel user = new UserModel() { Login = loginBox.Text, Password = PasswordBox.Text };
-            bool result = listOfUsers.FindUserInDatabase(user);
+            bool result = ListOfUsers.FindUserInDatabase(user);
 
             if (result)
             {
@@ -200,11 +200,7 @@ namespace SchoolSystem
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(IsLogin == true)
-            {
-                MessageBox.Show("Aby zamknąć aplikację należy się najpierw wylogować.");
-                e.Cancel = true;
-            }
+            IsLogin = false;
         }
     }
 }

@@ -17,8 +17,7 @@ namespace SchoolSystem.Helpers
         {
             try
             {
-                TabPage tabPage = new TabPage();
-                tabPage.Text = text;
+                var tabPage = new TabPage {Text = text};
                 mainTabControl.TabPages.Add(tabPage);
             }
             catch(Exception ex)
@@ -30,59 +29,31 @@ namespace SchoolSystem.Helpers
 
         public static List<UserModel> LoadUsers(this SchoolDataSet db)
         {
-            List<UserModel> listsOfUsers = new List<UserModel>();
-            UsersTableAdapter usersTable = new UsersTableAdapter();
+            var usersTable = new UsersTableAdapter();
             var users = usersTable.GetData();
 
-            foreach (var user in users)
-            {
-                UserModel tmp = new UserModel() { Login = user.Login, Password = user.Haslo };
-                listsOfUsers.Add(tmp);
-            }
-
-            return listsOfUsers;
+            return users.Select(user => new UserModel() {Login = user.Login, Password = user.Haslo}).ToList();
         }
 
         public static bool FindUserInDatabase(this List<UserModel> list,UserModel userModel)
         {
-            foreach (var user in list)
-            {
-                if (user.Login == userModel.Login && user.Password == userModel.Password)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return list.Any(user => user.Login == userModel.Login && user.Password == userModel.Password);
         }
 
         public static int FindIdSubject(this SchoolDataSet db,string name)
         {
-            PrzedmiotTableAdapter tableAdapter = new PrzedmiotTableAdapter();
+            var tableAdapter = new PrzedmiotTableAdapter();
             var list = tableAdapter.GetData();
 
-            foreach (var przedmiot in list)
-            {
-                if(przedmiot.Name == name)
-                {
-                    return przedmiot.Id_Przedmiot;
-                }
-            }
-            return 0;
+            return (from przedmiot in list where przedmiot.Name == name select przedmiot.Id_Przedmiot).FirstOrDefault();
         }
 
         public static int FindIdGrade(this SchoolDataSet db,int indeks)
         {
-            OcenyTableAdapter tableAdapter = new OcenyTableAdapter();
+            var tableAdapter = new OcenyTableAdapter();
             var list = tableAdapter.GetData();
 
-            foreach (var ocena in list)
-            {
-                if(ocena.Nr_indeks == indeks )
-                {
-                    return ocena.Id_oceny;
-                }
-            }
-            return 0;
+            return (from ocena in list where ocena.Nr_indeks == indeks select ocena.Id_oceny).FirstOrDefault();
         }
 
     }

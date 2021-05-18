@@ -188,7 +188,7 @@ namespace SchoolSystem.Forms.Grades
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GradesForm";
-            this.Text = "GradesForm";
+            this.Text = "Oceny";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GradesForm_FormClosed);
             this.Load += new System.EventHandler(this.GradesForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

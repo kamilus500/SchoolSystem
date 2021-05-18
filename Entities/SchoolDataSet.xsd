@@ -534,7 +534,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
   <xs:element name="SchoolDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SchoolDataSet" msprop:Generator_UserDSName="SchoolDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Nauczyciel" msprop:Generator_TableClassName="NauczycielDataTable" msprop:Generator_TableVarName="tableNauczyciel" msprop:Generator_TablePropName="Nauczyciel" msprop:Generator_RowDeletingName="NauczycielRowDeleting" msprop:Generator_RowChangingName="NauczycielRowChanging" msprop:Generator_RowEvHandlerName="NauczycielRowChangeEventHandler" msprop:Generator_RowDeletedName="NauczycielRowDeleted" msprop:Generator_UserTableName="Nauczyciel" msprop:Generator_RowChangedName="NauczycielRowChanged" msprop:Generator_RowEvArgName="NauczycielRowChangeEvent" msprop:Generator_RowClassName="NauczycielRow">
+        <xs:element name="Nauczyciel" msprop:Generator_TableClassName="NauczycielDataTable" msprop:Generator_TableVarName="tableNauczyciel" msprop:Generator_RowChangedName="NauczycielRowChanged" msprop:Generator_TablePropName="Nauczyciel" msprop:Generator_RowDeletingName="NauczycielRowDeleting" msprop:Generator_RowChangingName="NauczycielRowChanging" msprop:Generator_RowEvHandlerName="NauczycielRowChangeEventHandler" msprop:Generator_RowDeletedName="NauczycielRowDeleted" msprop:Generator_RowClassName="NauczycielRow" msprop:Generator_UserTableName="Nauczyciel" msprop:Generator_RowEvArgName="NauczycielRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_Nauczyciela" msprop:Generator_ColumnVarNameInTable="columnId_Nauczyciela" msprop:Generator_ColumnPropNameInRow="Id_Nauczyciela" msprop:Generator_ColumnPropNameInTable="Id_NauczycielaColumn" msprop:Generator_UserColumnName="Id_Nauczyciela" type="xs:int" />
@@ -556,7 +556,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Oceny" msprop:Generator_TableClassName="OcenyDataTable" msprop:Generator_TableVarName="tableOceny" msprop:Generator_TablePropName="Oceny" msprop:Generator_RowDeletingName="OcenyRowDeleting" msprop:Generator_RowChangingName="OcenyRowChanging" msprop:Generator_RowEvHandlerName="OcenyRowChangeEventHandler" msprop:Generator_RowDeletedName="OcenyRowDeleted" msprop:Generator_UserTableName="Oceny" msprop:Generator_RowChangedName="OcenyRowChanged" msprop:Generator_RowEvArgName="OcenyRowChangeEvent" msprop:Generator_RowClassName="OcenyRow">
+        <xs:element name="Oceny" msprop:Generator_TableClassName="OcenyDataTable" msprop:Generator_TableVarName="tableOceny" msprop:Generator_RowChangedName="OcenyRowChanged" msprop:Generator_TablePropName="Oceny" msprop:Generator_RowDeletingName="OcenyRowDeleting" msprop:Generator_RowChangingName="OcenyRowChanging" msprop:Generator_RowEvHandlerName="OcenyRowChangeEventHandler" msprop:Generator_RowDeletedName="OcenyRowDeleted" msprop:Generator_RowClassName="OcenyRow" msprop:Generator_UserTableName="Oceny" msprop:Generator_RowEvArgName="OcenyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_oceny" msprop:Generator_ColumnVarNameInTable="columnId_oceny" msprop:Generator_ColumnPropNameInRow="Id_oceny" msprop:Generator_ColumnPropNameInTable="Id_ocenyColumn" msprop:Generator_UserColumnName="Id_oceny" type="xs:int" />
@@ -566,7 +566,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Przedmiot" msprop:Generator_TableClassName="PrzedmiotDataTable" msprop:Generator_TableVarName="tablePrzedmiot" msprop:Generator_TablePropName="Przedmiot" msprop:Generator_RowDeletingName="PrzedmiotRowDeleting" msprop:Generator_RowChangingName="PrzedmiotRowChanging" msprop:Generator_RowEvHandlerName="PrzedmiotRowChangeEventHandler" msprop:Generator_RowDeletedName="PrzedmiotRowDeleted" msprop:Generator_UserTableName="Przedmiot" msprop:Generator_RowChangedName="PrzedmiotRowChanged" msprop:Generator_RowEvArgName="PrzedmiotRowChangeEvent" msprop:Generator_RowClassName="PrzedmiotRow">
+        <xs:element name="Przedmiot" msprop:Generator_TableClassName="PrzedmiotDataTable" msprop:Generator_TableVarName="tablePrzedmiot" msprop:Generator_RowChangedName="PrzedmiotRowChanged" msprop:Generator_TablePropName="Przedmiot" msprop:Generator_RowDeletingName="PrzedmiotRowDeleting" msprop:Generator_RowChangingName="PrzedmiotRowChanging" msprop:Generator_RowEvHandlerName="PrzedmiotRowChangeEventHandler" msprop:Generator_RowDeletedName="PrzedmiotRowDeleted" msprop:Generator_RowClassName="PrzedmiotRow" msprop:Generator_UserTableName="Przedmiot" msprop:Generator_RowEvArgName="PrzedmiotRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_Przedmiot" msprop:Generator_ColumnVarNameInTable="columnId_Przedmiot" msprop:Generator_ColumnPropNameInRow="Id_Przedmiot" msprop:Generator_ColumnPropNameInTable="Id_PrzedmiotColumn" msprop:Generator_UserColumnName="Id_Przedmiot" type="xs:int" />
@@ -580,7 +580,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Student" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_TableVarName="tableStudent" msprop:Generator_TablePropName="Student" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_UserTableName="Student" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_RowEvArgName="StudentRowChangeEvent" msprop:Generator_RowClassName="StudentRow">
+        <xs:element name="Student" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_TableVarName="tableStudent" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_TablePropName="Student" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_RowClassName="StudentRow" msprop:Generator_UserTableName="Student" msprop:Generator_RowEvArgName="StudentRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nr_indeks" msprop:Generator_ColumnVarNameInTable="columnNr_indeks" msprop:Generator_ColumnPropNameInRow="Nr_indeks" msprop:Generator_ColumnPropNameInTable="Nr_indeksColumn" msprop:Generator_UserColumnName="Nr_indeks" type="xs:int" />
@@ -602,7 +602,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_RowClassName="UsersRow">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowClassName="UsersRow" msprop:Generator_UserTableName="Users" msprop:Generator_RowEvArgName="UsersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_User" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_User" msprop:Generator_ColumnPropNameInRow="Id_User" msprop:Generator_ColumnPropNameInTable="Id_UserColumn" msprop:Generator_UserColumnName="Id_User" type="xs:int" />
@@ -623,7 +623,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Show_GradesWithSubject" msprop:Generator_TableClassName="Show_GradesWithSubjectDataTable" msprop:Generator_TableVarName="tableShow_GradesWithSubject" msprop:Generator_TablePropName="Show_GradesWithSubject" msprop:Generator_RowDeletingName="Show_GradesWithSubjectRowDeleting" msprop:Generator_RowChangingName="Show_GradesWithSubjectRowChanging" msprop:Generator_RowEvHandlerName="Show_GradesWithSubjectRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_GradesWithSubjectRowDeleted" msprop:Generator_UserTableName="Show_GradesWithSubject" msprop:Generator_RowChangedName="Show_GradesWithSubjectRowChanged" msprop:Generator_RowEvArgName="Show_GradesWithSubjectRowChangeEvent" msprop:Generator_RowClassName="Show_GradesWithSubjectRow">
+        <xs:element name="Show_GradesWithSubject" msprop:Generator_TableClassName="Show_GradesWithSubjectDataTable" msprop:Generator_TableVarName="tableShow_GradesWithSubject" msprop:Generator_RowChangedName="Show_GradesWithSubjectRowChanged" msprop:Generator_TablePropName="Show_GradesWithSubject" msprop:Generator_RowDeletingName="Show_GradesWithSubjectRowDeleting" msprop:Generator_RowChangingName="Show_GradesWithSubjectRowChanging" msprop:Generator_RowEvHandlerName="Show_GradesWithSubjectRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_GradesWithSubjectRowDeleted" msprop:Generator_RowClassName="Show_GradesWithSubjectRow" msprop:Generator_UserTableName="Show_GradesWithSubject" msprop:Generator_RowEvArgName="Show_GradesWithSubjectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Przedmiot" msprop:Generator_ColumnVarNameInTable="columnPrzedmiot" msprop:Generator_ColumnPropNameInRow="Przedmiot" msprop:Generator_ColumnPropNameInTable="PrzedmiotColumn" msprop:Generator_UserColumnName="Przedmiot">
@@ -638,7 +638,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Show_Students" msprop:Generator_TableClassName="Show_StudentsDataTable" msprop:Generator_TableVarName="tableShow_Students" msprop:Generator_TablePropName="Show_Students" msprop:Generator_RowDeletingName="Show_StudentsRowDeleting" msprop:Generator_RowChangingName="Show_StudentsRowChanging" msprop:Generator_RowEvHandlerName="Show_StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_StudentsRowDeleted" msprop:Generator_UserTableName="Show_Students" msprop:Generator_RowChangedName="Show_StudentsRowChanged" msprop:Generator_RowEvArgName="Show_StudentsRowChangeEvent" msprop:Generator_RowClassName="Show_StudentsRow">
+        <xs:element name="Show_Students" msprop:Generator_TableClassName="Show_StudentsDataTable" msprop:Generator_TableVarName="tableShow_Students" msprop:Generator_RowChangedName="Show_StudentsRowChanged" msprop:Generator_TablePropName="Show_Students" msprop:Generator_RowDeletingName="Show_StudentsRowDeleting" msprop:Generator_RowChangingName="Show_StudentsRowChanging" msprop:Generator_RowEvHandlerName="Show_StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_StudentsRowDeleted" msprop:Generator_RowClassName="Show_StudentsRow" msprop:Generator_UserTableName="Show_Students" msprop:Generator_RowEvArgName="Show_StudentsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Numer_x0020_indeksu" msprop:Generator_ColumnVarNameInTable="columnNumer_indeksu" msprop:Generator_ColumnPropNameInRow="Numer_indeksu" msprop:Generator_ColumnPropNameInTable="Numer_indeksuColumn" msprop:Generator_UserColumnName="Numer indeksu" type="xs:int" />
@@ -660,7 +660,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Show_StudentsWithGrades" msprop:Generator_TableClassName="Show_StudentsWithGradesDataTable" msprop:Generator_TableVarName="tableShow_StudentsWithGrades" msprop:Generator_TablePropName="Show_StudentsWithGrades" msprop:Generator_RowDeletingName="Show_StudentsWithGradesRowDeleting" msprop:Generator_RowChangingName="Show_StudentsWithGradesRowChanging" msprop:Generator_RowEvHandlerName="Show_StudentsWithGradesRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_StudentsWithGradesRowDeleted" msprop:Generator_UserTableName="Show_StudentsWithGrades" msprop:Generator_RowChangedName="Show_StudentsWithGradesRowChanged" msprop:Generator_RowEvArgName="Show_StudentsWithGradesRowChangeEvent" msprop:Generator_RowClassName="Show_StudentsWithGradesRow">
+        <xs:element name="Show_StudentsWithGrades" msprop:Generator_TableClassName="Show_StudentsWithGradesDataTable" msprop:Generator_TableVarName="tableShow_StudentsWithGrades" msprop:Generator_RowChangedName="Show_StudentsWithGradesRowChanged" msprop:Generator_TablePropName="Show_StudentsWithGrades" msprop:Generator_RowDeletingName="Show_StudentsWithGradesRowDeleting" msprop:Generator_RowChangingName="Show_StudentsWithGradesRowChanging" msprop:Generator_RowEvHandlerName="Show_StudentsWithGradesRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_StudentsWithGradesRowDeleted" msprop:Generator_RowClassName="Show_StudentsWithGradesRow" msprop:Generator_UserTableName="Show_StudentsWithGrades" msprop:Generator_RowEvArgName="Show_StudentsWithGradesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Numer_x0020_indeksu" msprop:Generator_ColumnVarNameInTable="columnNumer_indeksu" msprop:Generator_ColumnPropNameInRow="Numer_indeksu" msprop:Generator_ColumnPropNameInTable="Numer_indeksuColumn" msprop:Generator_UserColumnName="Numer indeksu" type="xs:int" />
@@ -689,7 +689,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Show_Subjects" msprop:Generator_TableClassName="Show_SubjectsDataTable" msprop:Generator_TableVarName="tableShow_Subjects" msprop:Generator_TablePropName="Show_Subjects" msprop:Generator_RowDeletingName="Show_SubjectsRowDeleting" msprop:Generator_RowChangingName="Show_SubjectsRowChanging" msprop:Generator_RowEvHandlerName="Show_SubjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_SubjectsRowDeleted" msprop:Generator_UserTableName="Show_Subjects" msprop:Generator_RowChangedName="Show_SubjectsRowChanged" msprop:Generator_RowEvArgName="Show_SubjectsRowChangeEvent" msprop:Generator_RowClassName="Show_SubjectsRow">
+        <xs:element name="Show_Subjects" msprop:Generator_TableClassName="Show_SubjectsDataTable" msprop:Generator_TableVarName="tableShow_Subjects" msprop:Generator_RowChangedName="Show_SubjectsRowChanged" msprop:Generator_TablePropName="Show_Subjects" msprop:Generator_RowDeletingName="Show_SubjectsRowDeleting" msprop:Generator_RowChangingName="Show_SubjectsRowChanging" msprop:Generator_RowEvHandlerName="Show_SubjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_SubjectsRowDeleted" msprop:Generator_RowClassName="Show_SubjectsRow" msprop:Generator_UserTableName="Show_Subjects" msprop:Generator_RowEvArgName="Show_SubjectsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nazwa" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_UserColumnName="Nazwa">
@@ -716,7 +716,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Show_Teachers" msprop:Generator_TableClassName="Show_TeachersDataTable" msprop:Generator_TableVarName="tableShow_Teachers" msprop:Generator_TablePropName="Show_Teachers" msprop:Generator_RowDeletingName="Show_TeachersRowDeleting" msprop:Generator_RowChangingName="Show_TeachersRowChanging" msprop:Generator_RowEvHandlerName="Show_TeachersRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_TeachersRowDeleted" msprop:Generator_UserTableName="Show_Teachers" msprop:Generator_RowChangedName="Show_TeachersRowChanged" msprop:Generator_RowEvArgName="Show_TeachersRowChangeEvent" msprop:Generator_RowClassName="Show_TeachersRow">
+        <xs:element name="Show_Teachers" msprop:Generator_TableClassName="Show_TeachersDataTable" msprop:Generator_TableVarName="tableShow_Teachers" msprop:Generator_RowChangedName="Show_TeachersRowChanged" msprop:Generator_TablePropName="Show_Teachers" msprop:Generator_RowDeletingName="Show_TeachersRowDeleting" msprop:Generator_RowChangingName="Show_TeachersRowChanging" msprop:Generator_RowEvHandlerName="Show_TeachersRowChangeEventHandler" msprop:Generator_RowDeletedName="Show_TeachersRowDeleted" msprop:Generator_RowClassName="Show_TeachersRow" msprop:Generator_UserTableName="Show_Teachers" msprop:Generator_RowEvArgName="Show_TeachersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Numer" msprop:Generator_ColumnVarNameInTable="columnNumer" msprop:Generator_ColumnPropNameInRow="Numer" msprop:Generator_ColumnPropNameInTable="NumerColumn" msprop:Generator_UserColumnName="Numer" type="xs:int" />
@@ -781,7 +781,7 @@ SELECT Id_User, Login, Haslo FROM Users WHERE (Id_User = @Id_User)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_OCENYPRZEDMIOT" msdata:parent="Przedmiot" msdata:child="Oceny" msdata:parentkey="Id_Przedmiot" msdata:childkey="Id_Przedmiotu" msprop:Generator_UserChildTable="Oceny" msprop:Generator_ChildPropName="GetOcenyRows" msprop:Generator_UserRelationName="FK_OCENYPRZEDMIOT" msprop:Generator_RelationVarName="relationFK_OCENYPRZEDMIOT" msprop:Generator_UserParentTable="Przedmiot" msprop:Generator_ParentPropName="PrzedmiotRow" />
+      <msdata:Relationship name="FK_OCENYPRZEDMIOT" msdata:parent="Przedmiot" msdata:child="Oceny" msdata:parentkey="Id_Przedmiot" msdata:childkey="Id_Przedmiotu" msprop:Generator_UserChildTable="Oceny" msprop:Generator_ChildPropName="GetOcenyRows" msprop:Generator_UserRelationName="FK_OCENYPRZEDMIOT" msprop:Generator_ParentPropName="PrzedmiotRow" msprop:Generator_RelationVarName="relationFK_OCENYPRZEDMIOT" msprop:Generator_UserParentTable="Przedmiot" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
